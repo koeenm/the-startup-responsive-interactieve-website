@@ -168,6 +168,7 @@ section.live-radio {
 
     button.live-button {
         background-color: var(--backgroundcolorlight);
+        color: black;
         border: 0.3vw solid var(--primarycolorwarmgray);
         font-family: var(--mainfontsemibold);
         font-size: 2em;
