@@ -31,6 +31,7 @@
 
 body {
     background-color: var(--backgroundcolorlight);
+    overflow-x: hidden;
 }
 
 h1 {
@@ -126,10 +127,12 @@ section.programs {
     ul {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        overflow-x: auto;
         list-style: none;
-        justify-content: center;
-        padding: 1em 0;
+        justify-content: start;
+        padding: 1.5em 0;
+        padding-left: 1em;
+        gap: 1em;
     }
 
     li {
@@ -143,6 +146,29 @@ section.programs {
 section.missed {
     padding: var(--mobiletextpadding);
     padding-bottom: 1em;
+
+    & h2 {
+        font-family: var(--mainfontsemibold);
+        font-size: 2em;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        list-style: none;
+        justify-content: start;
+        padding: 1.5em 0;
+        padding-left: 1em;
+        gap: 1em;
+    }
+
+    li {
+        
+        & img {
+            max-width: 47.5vw;
+        }
+    }
 }
 
 section.live-radio {
