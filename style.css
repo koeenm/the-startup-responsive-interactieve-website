@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --primarycoloryellow: rgb(255, 210, 0);
+    --primarycolorblack: rgb(31,31,31);
+    --primarycolorwarmgray: rgb(215, 210, 203);
+    --backgroundcolorlight: rgb(245,245,245);
+    --mainfont: "FSLucas regular", sans-serif;
+    --mainfontsemibold: "FSLucas semi bold", sans-serif;
+    --mainfontbold: "FSLucas extra bold", sans-serif;
+    --mobiletextpadding: 0 0.5em;
+}
+
+@font-face {
+    font-family: "FSLucas regular";
+    src: url(fonts/FSLucas-Regular.otf);
+}
+
+@font-face {
+    font-family: "FSLucas semi bold";
+    src: url(fonts/FSLucas-SemiBold.otf);
+}
+
+@font-face {
+    font-family: "FSLucas extra bold";
+    src: url(fonts/FSLucas-ExtraBold.otf);
+}
+
+body {
+    background-color: var(--backgroundcolorlight);
+}
+
+h1 {
+    font-family: var(--mainfontsemibold);
+    font-size: 2.5em;
+}
+
+h2 {
+    font-family: var(--mainfontsemibold);
+    font-size: 2em;
+}
+
+h3 {
+    font-family: var(--mainfont);
+    font-size: 1.5em;
+}
+
+p {
+    font-family: var(--mainfont);
+    max-width: 30em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primarycolorblack);
+    
+        & nav {
+
+        ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            padding: 0;
+        }
+
+        li:first-child {
+            margin-right: auto;
+            
+            & img {
+                height: 7vh;
+            }
+        }
+
+        li {
+            padding-right: 1em;
+
+            & img {
+                height: 3vh;
+            }
+        }
+    }
+}
+
+section.listening {
+    font-family: var(--mainfont);
+    padding: var(--mobiletextpadding);
+
+    & h1 {
+        font-family: var(--mainfontsemibold);
+        font-size: 2.5em;
+    }
+
+    p {
+        max-width: 30em;
+    }
+}
+
+section.app-promo {
+    padding-right: 0;
+    background-color: white;
+
+    & img {
+        max-width: 100vw;
+        padding: 1em;
+    }
+}
+
+section.programs {
+    font-family: var(--mainfont);
+    padding: var(--mobiletextpadding);
+
+    & h2 {
+        font-family: var(--mainfontsemibold);
+        font-size: 2em;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+        padding: 1em 0;
+    }
+
+    li {
+        
+        & img {
+            max-width: 47.5vw;
+        }
+    }
+}
+
+section.missed {
+    padding: var(--mobiletextpadding);
+    padding-bottom: 1em;
+}
+
+section.live-radio {
+    padding: var(--mobiletextpadding);
+
+    & .current-live {
+        padding-top: 0.5em;
+        display: flex;
+        gap: 1em;
+        justify-content: center;
+
+        & img {
+            max-width: 30vw;
+        }
+    }
+
+    .live-button-area {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+
+    button.live-button {
+        background-color: var(--backgroundcolorlight);
+        border: 0.3vw solid var(--primarycolorwarmgray);
+        font-family: var(--mainfontsemibold);
+        font-size: 2em;
+        width: 60vw;
+    }
+}
+
+footer {
+    margin-top: 1em;
+    padding-bottom: 1em;
+    background-color: var(--primarycolorblack);
+    color: white;
+
+    & .qr-codes {
+        padding: 1em;
+        display: flex;
+        gap: 5vw;
+
+        & img {
+            max-width: 15vw;
+            border-radius: 0.5em;
+        }
+    }
+
+    ul {
+        padding: var(--mobiletextpadding);
+        list-style: none;
+
+        & li {
+            padding-top: 0.5em;
+        }
+
+        a {
+            font-family: var(--mainfont);
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+
+    picture {
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
+
+        & img {
+            width: 75vw;
+        }
+    }
+}
+
