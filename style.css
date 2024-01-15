@@ -59,6 +59,12 @@ ul {
     padding: 0;
 }
 
+a {
+    font-family: var(--mainfont);
+    text-decoration: none;
+    color: white;
+}
+
 header {
     background-color: var(--primarycolorblack);
     
@@ -88,6 +94,24 @@ header {
             }
         }
     }
+
+    nav.burger-menu-dropdown {
+        display: none;
+
+        & ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            padding: 0.5em 0;
+            margin: 0;
+        }
+    }
+}
+
+.active {
+    display: block;
 }
 
 section.listening {
@@ -110,12 +134,13 @@ section.app-promo {
     justify-content: center;
 
     & img {
-        max-width: 100vw;
+        min-width: 20em;
+        width: 75vw;
         padding: 1em;
     }
 }
 
-section.programs {
+section.programs, section.missed, section.featured {
     font-family: var(--mainfont);
     padding: var(--mobiletextpadding);
 
@@ -249,3 +274,36 @@ footer {
     }
 }
 
+@media (min-width: 450px) {
+    section.programs, section.missed, section.featured {
+
+    & li {
+    
+        & img {
+            max-width: 12em;
+        }
+    }
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        display: grid;
+    }
+
+    header {
+        grid-area: 'top';
+    }
+
+    section.listening, section.missed, section.live-radio {
+        grid-area: 'left';
+    }
+
+    section.featured {
+        grid-area: 'right';
+    }
+
+    footer {
+        grid-area: 'bottom';
+    }
+}
