@@ -66,11 +66,19 @@ a {
 }
 
 header {
-    background-color: var(--primarycolorblack);
-    
-        & nav {
+    margin-bottom: 4rem;
+    z-index: 10;
+}
 
-        ul {
+header:has(.burger-menu-dropdown.active) {
+    margin-bottom: 0;
+}
+
+nav.nav-header {
+    z-index: 10;
+    background-color: var(--primarycolorblack);
+
+        & ul {
             list-style: none;
             display: flex;
             align-items: center;
@@ -95,23 +103,33 @@ header {
         }
     }
 
-    nav.burger-menu-dropdown {
-        display: none;
+.burger-menu-dropdown {
+    z-index: 5;
+    margin-top: -15em;
+    transition: margin-top 0.3s;
 
-        & ul {
-            display: flex;
-            flex-direction: column;
-        }
+    & ul {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--primarycolorblack);
+        width: 100vw;
+    }
 
-        li {
-            padding: 0.5em 0;
-            margin: 0;
-        }
+    li {
+        display: flex;
+        justify-content: center;
+        padding: 0.5em 0;
+        margin: 0;
     }
 }
 
-.active {
-    display: block;
+.burger-menu-dropdown.active {
+    z-index: 5;
+    margin-top: 0;
+}
+
+main {
+    /* margin-top: 4em; */
 }
 
 section.listening {
@@ -152,7 +170,7 @@ section.programs, section.missed, section.featured {
     ul {
         display: flex;
         flex-direction: row;
-        overflow-x: auto;
+        overflow-x: scroll;
         list-style: none;
         justify-content: start;
         padding: 1.5em 0;
@@ -161,7 +179,7 @@ section.programs, section.missed, section.featured {
     }
 
     li {
-        
+
         & img {
             max-width: 47.5vw;
         }
@@ -286,20 +304,24 @@ footer {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 960px) {
     body {
         display: grid;
+        grid-template-areas: 
+        'top top'
+        'left right'
+        'bottom bottom';
     }
 
-    header {
+    header, nav {
         grid-area: 'top';
     }
 
-    section.listening, section.missed, section.live-radio {
+    .left-screen {
         grid-area: 'left';
     }
 
-    section.featured {
+    .featured {
         grid-area: 'right';
     }
 

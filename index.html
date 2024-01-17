@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BNR Nieuwsradio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="nav-header">
             <ul>
                 <li>
                     <img src="fotos/BNR-mic.png" alt="BNR Logo mic">
@@ -33,38 +32,40 @@
         </nav>
     </header>   
     <main>
-        <section class="listening">
-            <h1> Luisteren </h1>
-            <p> Hier is een overzicht van verschillende luistermogelijkheden. Van podcasts en programma's naar live naar de radio luisteren of deze terug luisteren. </p>
-        </section>
+        <section class="left-screen">
+            <section class="listening">
+                <h1> Luisteren </h1>
+                <p> Hier is een overzicht van verschillende luistermogelijkheden. Van podcasts en programma's naar live naar de radio luisteren of deze terug luisteren. </p>
+            </section>
 
-        <section class="app-promo">
-            <img src="fotos/BNR App campagne - email handtekening - 72 dpi.jpg" alt="mobiele app campagne">
-        </section>
+            <section class="app-promo">
+                <img src="fotos/BNR App campagne - email handtekening - 72 dpi.jpg" alt="mobiele app campagne">
+            </section>
 
-        <section class="programs">
-            <h2>Programma's en podcasts</h2>
-            <ul>
-                <li><img src="podcasts en programmas/all in the game.avif" alt="all in the game"></li>
-                <li><img src="podcasts en programmas/amerika.avif" alt="amerika"></li>
-                <li><img src="podcasts en programmas/baanbrekende businessmodellen.avif" alt="baanbrekende businessmodellen"></li>
-                <li><img src="podcasts en programmas/ben van der burg.avif" alt="ben van der burg"></li>
-                <li><img src="podcasts en programmas/bernard hammelburg.avif" alt="bernard hammelburg"></li>
-                <li><img src="podcasts en programmas/bnr beter.avif" alt="bnr beter"></li>
-            </ul>
-        </section>
+            <section class="programs">
+                <h2>Programma's en podcasts</h2>
+                <ul>
+                    <li><img src="podcasts en programmas/all in the game.avif" alt="all in the game"></li>
+                    <li><img src="podcasts en programmas/amerika.avif" alt="amerika"></li>
+                    <li><img src="podcasts en programmas/baanbrekende businessmodellen.avif" alt="baanbrekende businessmodellen"></li>
+                    <li><img src="podcasts en programmas/ben van der burg.avif" alt="ben van der burg"></li>
+                    <li><img src="podcasts en programmas/bernard hammelburg.avif" alt="bernard hammelburg"></li>
+                    <li><img src="podcasts en programmas/bnr beter.avif" alt="bnr beter"></li>
+                </ul>
+            </section>
 
-        <section class="missed">
-            <h2>Gemist</h2>
-            <p>Hier komen de beschikbare gemiste programma's, podcasts of delen van de live radio.</p>
-            <ul>
-                <li><img src="podcasts en programmas/bnr beter.avif" alt="bnr beter"></li>
-                <li><img src="podcasts en programmas/baanbrekende businessmodellen.avif" alt="baanbrekende businessmodellen"></li>
-                <li><img src="podcasts en programmas/amerika.avif" alt="amerika"></li>
-                <li><img src="podcasts en programmas/bernard hammelburg.avif" alt="bernard hammelburg"></li>
-                <li><img src="podcasts en programmas/ben van der burg.avif" alt="ben van der burg"></li>
-                <li><img src="podcasts en programmas/all in the game.avif" alt="all in the game"></li>
-            </ul>
+            <section class="missed">
+                <h2>Gemist</h2>
+                <p>Hier komen de beschikbare gemiste programma's, podcasts of delen van de live radio.</p>
+                <ul>
+                    <li><img src="podcasts en programmas/bnr beter.avif" alt="bnr beter"></li>
+                    <li><img src="podcasts en programmas/baanbrekende businessmodellen.avif" alt="baanbrekende businessmodellen"></li>
+                    <li><img src="podcasts en programmas/amerika.avif" alt="amerika"></li>
+                    <li><img src="podcasts en programmas/bernard hammelburg.avif" alt="bernard hammelburg"></li>
+                    <li><img src="podcasts en programmas/ben van der burg.avif" alt="ben van der burg"></li>
+                    <li><img src="podcasts en programmas/all in the game.avif" alt="all in the game"></li>
+                </ul>
+            </section>
         </section>
 
         <section class="featured">
@@ -79,22 +80,23 @@
                 <li><img src="podcasts en programmas/bnr beter.avif" alt="bnr beter"></li>
             </ul>
         </section>
-
-        <section class="live-radio">
-            <h2>Nu op de radio</h2>
-            <div class="current-live">
-                <img src="podcasts en programmas/the daily move (live radio).avif" alt="the daily move">
-                <p>Live uitzending van Liesbeth Staats en Kees Dorresteijn's programma 'The Daily Move'.</p>
-            </div>
-            <br>
-            <div class="live-button-area">
-            <button class="live-button">
-                Luister live
-            </button>
-            <button class="live-button">
-                Kijk live
-            </button>
-            </div>
+        <section class="left-screen">
+            <section class="live-radio">
+                <h2>Nu op de radio</h2>
+                <div class="current-live">
+                    <img src="podcasts en programmas/the daily move (live radio).avif" alt="the daily move">
+                    <p>Live uitzending van Liesbeth Staats en Kees Dorresteijn's programma 'The Daily Move'.</p>
+                </div>
+                <br>
+                <div class="live-button-area">
+                <button class="live-button">
+                    Luister live
+                </button>
+                <button class="live-button">
+                    Kijk live
+                </button>
+                </div>
+            </section>
         </section>
     </main>
 
@@ -116,5 +118,6 @@
             <img src="fotos/BNR App campagne - email handtekening - 72 dpi.jpg" alt="BNR app campagne">
         </picture>  
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
