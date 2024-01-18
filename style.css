@@ -75,7 +75,9 @@ header:has(.burger-menu-dropdown.active) {
 }
 
 nav.nav-header {
+    /* z-index heeft pas effect wanneer het element een position heeft */
     z-index: 10;
+    position: relative; 
     background-color: var(--primarycolorblack);
 
         & ul {
@@ -104,9 +106,11 @@ nav.nav-header {
     }
 
 .burger-menu-dropdown {
-    z-index: 5;
     margin-top: -15em;
-    transition: margin-top 0.3s;
+    transition: margin-top 0.3s cubic-bezier(0.000, 1.450, 1.000, 0.930);
+    /* z-index heeft pas effect wanneer het element een position heeft */
+    z-index: 5;
+    position: relative;
 
     & ul {
         display: flex;
@@ -124,7 +128,6 @@ nav.nav-header {
 }
 
 .burger-menu-dropdown.active {
-    z-index: 5;
     margin-top: 0;
 }
 
@@ -198,7 +201,7 @@ section.missed {
     ul {
         display: flex;
         flex-direction: row;
-        overflow-x: auto;
+        overflow-x: scroll;
         list-style: none;
         justify-content: start;
         padding: 1.5em 0;

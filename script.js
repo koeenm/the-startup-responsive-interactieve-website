@@ -5,7 +5,7 @@ console.log('2')
 
 hamburger.addEventListener("click", function() {
     console.log('3')
-    // hamburger.classList.toggle("active");
+    hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
     console.log('4')
 });
