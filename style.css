@@ -74,7 +74,7 @@ header:has(.burger-menu-dropdown.active) {
     margin-bottom: 0;
 }
 
-nav.nav-header {
+.nav-header {
     /* z-index heeft pas effect wanneer het element een position heeft */
     z-index: 10;
     position: relative; 
@@ -107,7 +107,7 @@ nav.nav-header {
 
 .burger-menu-dropdown {
     margin-top: -15em;
-    transition: margin-top 0.3s cubic-bezier(0.000, 1.450, 1.000, 0.930);
+    transition: margin-top 0.3s cubic-bezier(0.000, 1.225, 1.000, 0.930);
     /* z-index heeft pas effect wanneer het element een position heeft */
     z-index: 5;
     position: relative;
@@ -131,11 +131,7 @@ nav.nav-header {
     margin-top: 0;
 }
 
-main {
-    /* margin-top: 4em; */
-}
-
-section.listening {
+.listening {
     font-family: var(--mainfont);
     padding: var(--mobiletextpadding);
 
@@ -149,19 +145,19 @@ section.listening {
     }
 }
 
-section.app-promo {
+.app-promo {
     background-color: white;
     display: flex;
     justify-content: center;
 
     & img {
         min-width: 20em;
-        width: 75vw;
+        max-width: 30em;
         padding: 1em;
     }
 }
 
-section.programs, section.missed, section.featured {
+.programs, .missed, .featured {
     font-family: var(--mainfont);
     padding: var(--mobiletextpadding);
 
@@ -189,7 +185,7 @@ section.programs, section.missed, section.featured {
     }
 }
 
-section.missed {
+.missed {
     padding: var(--mobiletextpadding);
     padding-bottom: 1em;
 
@@ -217,7 +213,7 @@ section.missed {
     }
 }
 
-section.live-radio {
+.live-radio {
     padding: var(--mobiletextpadding);
 
     & .current-live {
@@ -290,13 +286,15 @@ footer {
         margin-top: 1em;
 
         & img {
-            width: 75vw;
+            min-width: 20em;
+            max-width: 30em;
+            padding: 1em;
         }
     }
 }
 
 @media (min-width: 450px) {
-    section.programs, section.missed, section.featured {
+    .programs, .missed, .featured {
 
     & li {
     
@@ -314,18 +312,21 @@ footer {
         'top top'
         'left right'
         'bottom bottom';
+        gri
     }
 
-    header, nav {
+    header {
         grid-area: 'top';
     }
 
-    .left-screen {
+    .listening, .app-promo, .programs, .missed, .live-radio {
         grid-area: 'left';
     }
 
     .featured {
         grid-area: 'right';
+        display: flex;
+        flex-direction: column;
     }
 
     footer {
