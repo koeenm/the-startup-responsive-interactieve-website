@@ -306,31 +306,32 @@ footer {
 }
 
 @media (min-width: 960px) {
-    /* body {
+    body {
         display: grid;
         grid-template-areas: 
-        'top top'
-        'left right'
-        'bottom bottom';
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        "top top"
+        "left right"
+        "bottom bottom";
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: 3em 4fr 1fr;
+
     }
 
     header {
-        grid-area: 'top';
+        grid-area: top;
     }
 
     .listening, .app-promo, .programs, .missed, .live-radio {
-        grid-area: 'left';
+        grid-area: left;
     }
 
     .featured {
-        grid-area: 'right';
+        grid-area: right;
         display: flex;
         flex-direction: column;
     }
 
     footer {
-        grid-area: 'bottom';
-    } */
+        grid-area: bottom;
+    }
 }
