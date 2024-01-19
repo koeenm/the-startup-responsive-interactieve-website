@@ -306,13 +306,14 @@ footer {
 }
 
 @media (min-width: 960px) {
-    body {
+    /* body {
         display: grid;
         grid-template-areas: 
         'top top'
         'left right'
         'bottom bottom';
-        gri
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     header {
@@ -331,5 +332,5 @@ footer {
 
     footer {
         grid-area: 'bottom';
-    }
+    } */
 }
