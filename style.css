@@ -250,6 +250,26 @@ header:has(.burger-menu-dropdown.active) {
             align-items: center;
             width: 10em;
         }
+
+        .play-radio-svg, .play-radio-text {
+            position: absolute;
+            z-index: 20;
+        }
+
+        .play-radio-text {
+            padding-left: 3em;
+            background-color: var(--backgroundcolorlight);
+            z-index: 15;
+        }
+
+        .pause-radio-svg, .pause-radio-text {
+            position: absolute;
+            z-index: 10;
+        }
+
+        .pause-radio-text {
+            padding-left: 3em;
+        }
     
         button {
             border-radius: 0;
