@@ -157,8 +157,8 @@ header:has(.burger-menu-dropdown.active) {
     justify-content: center;
 
     & img {
-        min-width: 20em;
-        max-width: 30em;
+        min-width: 10em;
+        max-width: 20em;
         padding: 1em;
     }
 }
@@ -370,6 +370,13 @@ footer {
 
     main {
         margin: 1em 8vw;
+    }
+
+    .app-promo {
+
+        & img {
+            max-width: 30em;
+        }
     }
 
     .featured {
