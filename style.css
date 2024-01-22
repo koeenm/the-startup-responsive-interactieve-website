@@ -8,6 +8,8 @@
     --primarycolorblack: rgb(31,31,31);
     --primarycolorwarmgray: rgb(215, 210, 203);
     --backgroundcolorlight: rgb(245,245,245);
+    --foregroundcolor: #E8E5E2;
+    --foregroundcolorhover: #F2F1F0;
     --mainfont: "FSLucas regular", sans-serif;
     --mainfontsemibold: "FSLucas semi bold", sans-serif;
     --mainfontbold: "FSLucas extra bold", sans-serif;
@@ -215,6 +217,8 @@ header:has(.burger-menu-dropdown.active) {
 
 .live-radio {
     padding: var(--mobiletextpadding);
+    padding-left: 1.5em;
+
 
     & .current-live {
         padding-top: 0.5em;
@@ -223,24 +227,39 @@ header:has(.burger-menu-dropdown.active) {
         justify-content: center;
 
         & img {
-            max-width: 30vw;
+            max-width: 47.5vw;
         }
     }
 
-    .live-button-area {
+    .live-buttons {
         display: flex;
+        gap: 0.5em;
         justify-content: center;
-        flex-wrap: wrap;
-        gap: 1em;
-    }
 
-    button.live-button {
-        background-color: var(--backgroundcolorlight);
-        color: black;
-        border: 0.3vw solid var(--primarycolorwarmgray);
-        font-family: var(--mainfontsemibold);
-        font-size: 2em;
-        width: 60vw;
+        & audio {
+            display: none;
+        }
+    
+        .hide {
+            display: none;
+        }
+    
+        .play-radio, .watch-radio {
+            display: flex;
+            flex-direction: flex;
+            align-items: center;
+            width: 10em;
+        }
+    
+        button {
+            border-radius: 0;
+            border: 0.1em solid black;
+            background-color: var(--backgroundcolorlight);
+        }
+
+        button:hover {
+            background-color: var(--foregroundcolorhover);
+        }
     }
 }
 
@@ -306,6 +325,7 @@ footer {
 }
 
 @media (min-width: 960px) {
+
     body {
         display: grid;
         grid-template-areas: 
@@ -329,6 +349,7 @@ footer {
         grid-area: right;
         display: flex;
         flex-direction: column;
+        align-self: flex-end;
     }
 
     footer {
