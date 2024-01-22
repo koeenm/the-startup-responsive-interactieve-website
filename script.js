@@ -14,7 +14,7 @@ hamburger.addEventListener("click", function() {
     // 1. Selecteren van element via class
     const playradio = document.querySelector('.play-radio');
     const audio = document.querySelector('audio');
-    const count = 0
+    var count = 0
 
     // 2. Event
     function playPause(){
@@ -39,4 +39,3 @@ hamburger.addEventListener("click", function() {
       changeTextplay.classList.toggle('hide')
       playSvg.classList.toggle('hide')
     })
-
