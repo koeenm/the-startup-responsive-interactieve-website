@@ -14,7 +14,7 @@ hamburger.addEventListener("click", function() {
     // 1. Selecteren van element via class
     const playradio = document.querySelector('.play-radio');
     const audio = document.querySelector('audio');
-    var count = 0
+    let count = 0
 
     // 2. Event
     function playPause(){
