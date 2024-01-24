@@ -10,6 +10,7 @@
     --backgroundcolorlight: rgb(245,245,245);
     --foregroundcolor: #E8E5E2;
     --foregroundcolorhover: #F2F1F0;
+    --focuscolor: orange;
     --mainfont: "FSLucas regular", sans-serif;
     --mainfontsemibold: "FSLucas semi bold", sans-serif;
     --mainfontbold: "FSLucas extra bold", sans-serif;
@@ -63,6 +64,14 @@ p {
 ul {
     list-style: none;
     padding: 0;
+}
+
+a:focus-visible {
+    outline: .1em solid var(--focuscolor);
+}
+
+button:focus-visible {
+    outline: .1em solid var(--focuscolor);
 }
 
 a {
