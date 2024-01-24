@@ -157,8 +157,9 @@ header:has(.burger-menu-dropdown.active) {
     }
 }
 
-.not-working-link a {
+.not-working-link a:hover {
     color: gray;
+    cursor: not-allowed;
 }
 
 .burger-menu-dropdown.active {
