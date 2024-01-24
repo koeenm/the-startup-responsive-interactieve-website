@@ -146,6 +146,10 @@ header:has(.burger-menu-dropdown.active) {
         padding: 0.5em 0;
         margin: 0;
     }
+
+    li:first-child {
+        display: none;
+    }
 }
 
 .burger-menu-dropdown.active {
@@ -319,6 +323,10 @@ header:has(.burger-menu-dropdown.active) {
             background-color: var(--foregroundcolorhover);
         }
 
+        button:focus-visible {
+            border-radius: 0.5em;
+        }
+
         
     }
 }
@@ -340,7 +348,8 @@ footer {
         }
 
         a {
-            outline-offset: 0.5em;
+            display: block;
+            outline-offset: 0.3em;
             border-radius: 0.8em;
             transition-duration: 200ms;
         }
@@ -394,8 +403,35 @@ footer {
 }
 
 @media (min-width: 620px) {
+    /* code vraag */
     .live-buttons {
         display: flex;
+    }
+
+    /* heading */
+    .nav-header {
+        display: none;
+    }
+
+    .burger-menu-dropdown {
+        margin: 0;
+
+        & ul {
+            flex-direction: row;
+            gap: 2em;
+            justify-content: end;
+            align-items: center;
+            padding-right: 2em;
+        }
+
+        li:first-child {
+            margin-right: auto;
+            display: block;
+            
+            & img {
+                height: 7vh;
+            }
+        }
     }
 }
 
