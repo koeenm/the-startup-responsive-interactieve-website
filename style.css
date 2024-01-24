@@ -330,6 +330,7 @@ header:has(.burger-menu-dropdown.active) {
 
         button:hover {
             background-color: var(--foregroundcolorhover);
+            cursor: pointer;
         }
 
         button:focus-visible {
