@@ -150,6 +150,15 @@ header:has(.burger-menu-dropdown.active) {
     li:first-child {
         display: none;
     }
+
+    a {
+        border-radius: 0.5em;
+        outline-offset: 0.2em;
+    }
+}
+
+.not-working-link a {
+    color: gray;
 }
 
 .burger-menu-dropdown.active {
