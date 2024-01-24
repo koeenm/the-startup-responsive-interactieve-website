@@ -11,6 +11,7 @@
     --foregroundcolor: #E8E5E2;
     --foregroundcolorhover: #F2F1F0;
     --focuscolor: orange;
+    --focusoutline: .15em solid var(--focuscolor);
     --mainfont: "FSLucas regular", sans-serif;
     --mainfontsemibold: "FSLucas semi bold", sans-serif;
     --mainfontbold: "FSLucas extra bold", sans-serif;
@@ -67,11 +68,15 @@ ul {
 }
 
 a:focus-visible {
-    outline: .1em solid var(--focuscolor);
+    outline: var(--focusoutline);
 }
 
 button:focus-visible {
-    outline: .1em solid var(--focuscolor);
+    outline: var(--focusoutline);
+    display: block;
+    outline-offset: 0.35em;
+    border-radius: 0.8em;
+    transition-duration: 200ms;
 }
 
 a {
@@ -198,6 +203,13 @@ header:has(.burger-menu-dropdown.active) {
             max-width: 47.5vw;
         }
     }
+
+    a {
+        display: block;
+        outline-offset: 0.5em;
+        border-radius: 0.8em;
+        transition-duration: 200ms;
+    }
 }
 
 .missed {
@@ -305,6 +317,8 @@ header:has(.burger-menu-dropdown.active) {
         button:hover {
             background-color: var(--foregroundcolorhover);
         }
+
+        
     }
 }
 
@@ -323,6 +337,12 @@ footer {
             max-width: 15vw;
             border-radius: 0.5em;
         }
+
+        a {
+            outline-offset: 0.5em;
+            border-radius: 0.8em;
+            transition-duration: 200ms;
+        }
     }
 
     ul {
@@ -337,6 +357,9 @@ footer {
             font-family: var(--mainfont);
             text-decoration: none;
             color: white;
+            outline-offset: 0.5em;
+            border-radius: 0.8em;
+            transition-duration: 200ms;
         }
 
         a:hover {
