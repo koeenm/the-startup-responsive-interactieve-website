@@ -14,7 +14,7 @@ Ik wilde de gebruiker de mogelijkheid geven om niet alleen naar de live radio te
 
 De website is volledig responsive, dus is op zo wel mobiel als op tablet, als op desktop te gebruiken. Ook is hij toegankelijk voor toetsenbord gebruikers, door middel van focus states.
 
-Het is me gelukt om een audio player toe te voegen en om een werkend menu te maken. Het is me niet gelukt de landingspagina voor de app campagne te maken.
+Het is me gelukt om een audio player toe te voegen en om een werkend menu te maken. Het is me niet gelukt de landingspagina voor de app campagne te maken. Ook zou ik een volgende keer gebruik willen maken van de slices.
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
